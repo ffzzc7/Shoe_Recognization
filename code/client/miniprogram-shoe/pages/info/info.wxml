@@ -1,0 +1,4 @@
+<!--pages/info/info.wxml-->
+<view class ='Info'>
+  <image mode='widthFix' src='{{testPath}}'></image>
+</view>
