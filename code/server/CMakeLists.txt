@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
 project(ShoesRecognizationService CXX)
-
 include(CheckIncludeFileCXX)
 
 check_include_file_cxx(any HAS_ANY)
@@ -20,17 +19,17 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # 设置一波源文件 这个地方头文件应该也可以加 类似vs的添加源文件
 set(SOURCE_FILES main.cpp shoesRecognization_Intetface_shoesrecognization.h shoesRecognization_Intetface_shoesrecognization.cc)
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
-#add_executable(${PROJECT_NAME} main.cpp)
 
-# ##############################################################################
-# If you include the drogon source code locally in your project, use this method
-# to add drogon
-# add_subdirectory(drogon)
-# target_link_libraries(${PROJECT_NAME} PRIVATE drogon)
-#
-# and comment out the following lines
 find_package(Drogon CONFIG REQUIRED)
-target_link_libraries(${PROJECT_NAME} PRIVATE Drogon::Drogon)
+set(OpenCV_DIR ~/wyz/opencv-3.4.1/build)
+find_package(OpenCV REQUIRED)
+
+set(Torch_DIR ~/wyz/libtorch/share/cmake/Torch)
+find_package(Torch REQUIRED)
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+
+#${OpenCV_LIBS} ${TORCH_LIBRARIES}
+target_link_libraries(${PROJECT_NAME} PRIVATE Drogon::Drogon ${OpenCV_LIBS}  ${TORCH_LIBRARIES})
 
 # ##############################################################################
 
@@ -52,10 +51,6 @@ aux_source_directory(models MODEL_SRC)
 
 drogon_create_views(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/views
         ${CMAKE_CURRENT_BINARY_DIR})
-# use the following line to create views with namespaces.
-# drogon_create_views(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/views
-#                     ${CMAKE_CURRENT_BINARY_DIR} TRUE)
-
 target_include_directories(${PROJECT_NAME}
         PRIVATE ..
         ${CMAKE_CURRENT_SOURCE_DIR}/models)
@@ -67,5 +62,3 @@ target_sources(${PROJECT_NAME}
         ${PLUGIN_SRC}
         ${MODEL_SRC})
 # ##############################################################################
-# uncomment the following line for dynamically loading views
-# set_property(TARGET ${PROJECT_NAME} PROPERTY ENABLE_EXPORTS ON)

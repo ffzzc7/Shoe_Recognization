@@ -1,0 +1,74 @@
+Determining if the include file coroutine exists failed with the following output:
+Change Dir: /home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_967d3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_967d3.dir/build.make CMakeFiles/cmTC_967d3.dir/build
+make[1]: Entering directory '/home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_967d3.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_967d3.dir/CheckIncludeFile.cxx.o -c /home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: coroutine: No such file or directory
+ #include <coroutine>
+          ^~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_967d3.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_967d3.dir/CheckIncludeFile.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_967d3.dir/CheckIncludeFile.cxx.o] Error 1
+make[1]: Leaving directory '/home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_967d3/fast' failed
+make: *** [cmTC_967d3/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b2daf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b2daf.dir/build.make CMakeFiles/cmTC_b2daf.dir/build
+make[1]: Entering directory '/home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b2daf.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_b2daf.dir/CheckSymbolExists.cxx.o -c /home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_b2daf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2daf.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_b2daf.dir/CheckSymbolExists.cxx.o  -o cmTC_b2daf 
+CMakeFiles/cmTC_b2daf.dir/CheckSymbolExists.cxx.o: In function `main':
+CheckSymbolExists.cxx:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b2daf.dir/build.make:97: recipe for target 'cmTC_b2daf' failed
+make[1]: *** [cmTC_b2daf] Error 1
+make[1]: Leaving directory '/home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b2daf/fast' failed
+make: *** [cmTC_b2daf/fast] Error 2
+
+File /home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0873c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0873c.dir/build.make CMakeFiles/cmTC_0873c.dir/build
+make[1]: Entering directory '/home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0873c.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0873c.dir/CheckFunctionExists.cxx.o -c /home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_0873c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0873c.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_0873c.dir/CheckFunctionExists.cxx.o  -o cmTC_0873c -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0873c.dir/build.make:97: recipe for target 'cmTC_0873c' failed
+make[1]: *** [cmTC_0873c] Error 1
+make[1]: Leaving directory '/home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0873c/fast' failed
+make: *** [cmTC_0873c/fast] Error 2
+
+
