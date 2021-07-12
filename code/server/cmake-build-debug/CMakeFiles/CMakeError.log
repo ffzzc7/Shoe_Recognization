@@ -1,0 +1,74 @@
+Determining if the include file coroutine exists failed with the following output:
+Change Dir: /home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6a1eb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6a1eb.dir/build.make CMakeFiles/cmTC_6a1eb.dir/build
+make[1]: Entering directory '/home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6a1eb.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_6a1eb.dir/CheckIncludeFile.cxx.o -c /home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: coroutine: No such file or directory
+ #include <coroutine>
+          ^~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_6a1eb.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_6a1eb.dir/CheckIncludeFile.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_6a1eb.dir/CheckIncludeFile.cxx.o] Error 1
+make[1]: Leaving directory '/home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6a1eb/fast' failed
+make: *** [cmTC_6a1eb/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_17909/fast"
+/usr/bin/make -f CMakeFiles/cmTC_17909.dir/build.make CMakeFiles/cmTC_17909.dir/build
+make[1]: Entering directory '/home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_17909.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_17909.dir/CheckSymbolExists.cxx.o -c /home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_17909
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17909.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_17909.dir/CheckSymbolExists.cxx.o  -o cmTC_17909 
+CMakeFiles/cmTC_17909.dir/CheckSymbolExists.cxx.o: In function `main':
+CheckSymbolExists.cxx:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_17909.dir/build.make:97: recipe for target 'cmTC_17909' failed
+make[1]: *** [cmTC_17909] Error 1
+make[1]: Leaving directory '/home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_17909/fast' failed
+make: *** [cmTC_17909/fast] Error 2
+
+File /home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_79e36/fast"
+/usr/bin/make -f CMakeFiles/cmTC_79e36.dir/build.make CMakeFiles/cmTC_79e36.dir/build
+make[1]: Entering directory '/home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_79e36.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_79e36.dir/CheckFunctionExists.cxx.o -c /home/ffzzc7/test/cmake-build-debug/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_79e36
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79e36.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_79e36.dir/CheckFunctionExists.cxx.o  -o cmTC_79e36 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_79e36.dir/build.make:97: recipe for target 'cmTC_79e36' failed
+make[1]: *** [cmTC_79e36] Error 1
+make[1]: Leaving directory '/home/ffzzc7/test/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_79e36/fast' failed
+make: *** [cmTC_79e36/fast] Error 2
+
+

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wyz/wyz/windowsPro/sourcefiles
+CMAKE_SOURCE_DIR = /home/ffzzc7/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release
+CMAKE_BINARY_DIR = /home/ffzzc7/test/cmake-build-release
 
 #=============================================================================
 # Target rules for target CMakeFiles/ShoesRecognizationService.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release
 CMakeFiles/ShoesRecognizationService.dir/all:
 	$(MAKE) -f CMakeFiles/ShoesRecognizationService.dir/build.make CMakeFiles/ShoesRecognizationService.dir/depend
 	$(MAKE) -f CMakeFiles/ShoesRecognizationService.dir/build.make CMakeFiles/ShoesRecognizationService.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles --progress-num=1,2,3 "Built target ShoesRecognizationService"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ffzzc7/test/cmake-build-release/CMakeFiles --progress-num=1,2,3 "Built target ShoesRecognizationService"
 .PHONY : CMakeFiles/ShoesRecognizationService.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/ShoesRecognizationService.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ShoesRecognizationService.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ffzzc7/test/cmake-build-release/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ShoesRecognizationService.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ffzzc7/test/cmake-build-release/CMakeFiles 0
 .PHONY : CMakeFiles/ShoesRecognizationService.dir/rule
 
 # Convenience name for target.

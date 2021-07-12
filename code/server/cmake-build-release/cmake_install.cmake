@@ -1,4 +1,4 @@
-# Install script for directory: /home/wyz/wyz/windowsPro/sourcefiles
+# Install script for directory: /home/ffzzc7/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/wyz/wyz/windowsPro/sourcefiles/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ffzzc7/test/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
